@@ -1,14 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { Cabecalho } from './components/cabecalho/cabecalho';
-import { Rodape } from './components/rodape/rodape';
-import { Livro } from './components/livro/livro';
+import { Cabecalho } from './componentes/cabecalho/cabecalho';
+import { Rodape } from './componentes/rodape/rodape';
+import { Livro } from './componentes/livro/livro';
+import { ListaLivros } from './componentes/lista-livros/lista-livros';
 
 @Component({
   selector: 'app-root',
   imports: [
     Cabecalho,
     Rodape,
-    Livro
+    ListaLivros
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
