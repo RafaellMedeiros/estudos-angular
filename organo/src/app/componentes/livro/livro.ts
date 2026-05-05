@@ -1,17 +1,13 @@
-import { Component, input } from '@angular/core';
-import { IntLivro } from './livros';
+export interface Livro {
+  titulo: string;
+  autoria: string;
+  imagem: string;
+  favorito: boolean;
+  genero: GeneroLiterario;
+}
 
-@Component({
-  selector: 'app-livro',
-  imports: [],
-  templateUrl: './livro.html',
-  styleUrl: './livro.css',
-})
-export class Livro {
-  livro = input.required<IntLivro>();
-
-  alterarFavorito() {
-    this.livro().favorito = !this.livro().favorito;
-  }
-
+export interface GeneroLiterario {
+  id: string;
+  value: string;
+  livros: Livro[]
 }
